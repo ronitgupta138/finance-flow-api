@@ -1,8 +1,15 @@
 <div align="center">
 
-# ⚡ FinFlow Core
+```text
+███████╗██╗███╗   ██╗███████╗██╗      ██████╗ ██╗    ██╗     ██████╗ ██████╗ ██████╗ ███████╗
+██╔════╝██║████╗  ██║██╔════╝██║     ██╔═══██╗██║    ██║    ██╔════╝██╔═══██╗██╔══██╗██╔════╝
+█████╗  ██║██╔██╗ ██║█████╗  ██║     ██║   ██║██║ █╗ ██║    ██║     ██║   ██║██████╔╝█████╗  
+██╔══╝  ██║██║╚██╗██║██╔══╝  ██║     ██║   ██║██║███╗██║    ██║     ██║   ██║██╔══██╗██╔══╝  
+██║     ██║██║ ╚████║██║     ███████╗╚██████╔╝╚███╔███╔╝    ╚██████╗╚██████╔╝██║  ██║███████╗
+╚═╝     ╚═╝╚═╝  ╚═══╝╚═╝     ╚══════╝ ╚═════╝  ╚══╝╚══╝      ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
+```
 
-**Production-Grade Banking & Financial Aggregation REST Platform (Spring Boot 3.3, Java 17, Spring Security 6 JWT, PostgreSQL)**
+### **Production-Grade Banking & Financial Aggregation REST Platform**
 
 [![Java](https://img.shields.io/badge/Java-17-0891b2?style=flat-square&logo=openjdk&logoColor=white)](https://openjdk.org/)
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.3.5-0891b2?style=flat-square&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
