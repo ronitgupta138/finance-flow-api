@@ -1,0 +1,40 @@
+server:
+  port: ${PORT:8080}
+  shutdown: graceful
+
+spring:
+  application:
+    name: finance-flow-api
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/financeflow_db}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 30000
+      pool-name: FinanceFlowHikariPool
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+jwt:
+  secret: ${JWT_SECRET:FinanceFlowSuperSecretDefaultKeyForJWTTokenSigning2026SecureKeyWithHighEntropy}
+  expiration: ${JWT_EXPIRATION:86400000}
+
+financeflow:
+  ingestion:
+    enabled: ${INGESTION_ENABLED:true}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
