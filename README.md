@@ -1,15 +1,15 @@
 <div align="center">
 
-# ⚡ FinanceFlow API
+# ⚡ FinFlow Core
 
-**High-Performance Distributed Personal Finance & Scheduled Market Analytics REST API**
+**Production-Grade Banking & Financial Aggregation REST Platform (Spring Boot 3.3, Java 17, Spring Security 6 JWT, PostgreSQL)**
 
 [![Java](https://img.shields.io/badge/Java-17-0891b2?style=flat-square&logo=openjdk&logoColor=white)](https://openjdk.org/)
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.3.5-0891b2?style=flat-square&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
 [![Spring Security](https://img.shields.io/badge/Spring_Security-JWT-0891b2?style=flat-square&logo=springsecurity&logoColor=white)](https://spring.io/projects/spring-security)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-0891b2?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![Docker](https://img.shields.io/badge/Docker-Multi--Stage-0891b2?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
-[![CI](https://img.shields.io/badge/CI-GitHub_Actions-0891b2?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/ronitgupta138/finance-flow-api/actions)
+[![CI](https://img.shields.io/badge/CI-GitHub_Actions-0891b2?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/ronitgupta138/finflow-core/actions)
 
 </div>
 
