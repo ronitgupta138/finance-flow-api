@@ -42,9 +42,9 @@ public class MeshController {
     @GetMapping("/public-key")
     public ResponseEntity<ApiResponse<Map<String, String>>> getPublicKey() {
         String keyBase64 = cryptoService.getServerPublicKeyBase64();
-        return ResponseEntity.ok(ApiResponse.success(
-                Map.of("publicKey", keyBase64, "algorithm", "RSA-OAEP-2048"),
-                "Server public key retrieved successfully"
+        return ResponseEntity.ok(ApiResponse.ok(
+                "Server public key retrieved successfully",
+                Map.of("publicKey", keyBase64, "algorithm", "RSA-OAEP-2048")
         ));
     }
 
@@ -56,7 +56,7 @@ public class MeshController {
     public ResponseEntity<ApiResponse<IngestResponseDto>> ingestPacket(
             @RequestBody EncryptedMeshPacketDto packet) {
         IngestResponseDto response = settlementService.processIngestedPacket(packet);
-        return ResponseEntity.ok(ApiResponse.success(response, "Packet ingestion evaluated"));
+        return ResponseEntity.ok(ApiResponse.ok("Packet ingestion evaluated", response));
     }
 
     /**
@@ -67,7 +67,7 @@ public class MeshController {
     public ResponseEntity<ApiResponse<MeshSimulationResultDto>> runSimulation(
             @RequestBody MeshSimulationRequestDto request) throws Exception {
         MeshSimulationResultDto result = simulator.simulateOfflineMeshRun(request);
-        return ResponseEntity.ok(ApiResponse.success(result, "Offline mesh simulation completed"));
+        return ResponseEntity.ok(ApiResponse.ok("Offline mesh simulation completed", result));
     }
 
     /**
@@ -76,6 +76,6 @@ public class MeshController {
     @GetMapping("/logs")
     public ResponseEntity<ApiResponse<List<MeshSettlementLog>>> getRecentLogs() {
         List<MeshSettlementLog> logs = logRepository.findTop20ByOrderByCreatedAtDesc();
-        return ResponseEntity.ok(ApiResponse.success(logs, "Recent mesh settlement logs retrieved"));
+        return ResponseEntity.ok(ApiResponse.ok("Recent mesh settlement logs retrieved", logs));
     }
 }
